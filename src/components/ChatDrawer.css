@@ -1,0 +1,151 @@
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.chat-toggle:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.chat-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
+
+.chat-drawer {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-drawer.open {
+  right: 0;
+}
+
+.chat-drawer-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-drawer-header h2 {
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.chat-drawer-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.empty-state {
+  color: #666;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.message {
+  margin-bottom: 15px;
+}
+
+.message.user .message-content {
+  background: #007bff;
+  color: white;
+  margin-left: auto;
+  max-width: 80%;
+}
+
+.message.bot .message-content {
+  background: #f1f1f1;
+  color: #333;
+  max-width: 80%;
+}
+
+.message-content {
+  padding: 10px 15px;
+  border-radius: 18px;
+  display: inline-block;
+}
+
+.chat-drawer-input {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-drawer-input textarea {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  resize: none;
+}
+
+.chat-drawer-input button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.chat-drawer-input button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.bottom-right-icon {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #28a745;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 999;
+}
